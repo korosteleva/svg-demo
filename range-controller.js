@@ -2,7 +2,6 @@
     let rangeNode = document.querySelector('.js-iframe-width-range');
     let frameNode = document.querySelector('.js-iframe');
     let initRangeValue = parseInt(rangeNode.getAttribute('max'), 10);
-    rangeNode.setAttribute('value', initRangeValue);
     setIframeWidth(initRangeValue);
 
     rangeNode.addEventListener('input', function (event) {
