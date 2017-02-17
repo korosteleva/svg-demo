@@ -1,0 +1,32 @@
+stop {
+    animation: colors 12s infinite;
+}
+
+.stop-2 {
+    animation-delay: -3s;
+}
+
+.stop-3 {
+    animation-delay: -6s;
+}
+
+@keyframes colors {
+    15% {
+        stop-color: crimson;
+    }
+    30% {
+        stop-color: gold;
+    }
+    45% {
+        stop-color: teal;
+    }
+    60% {
+        stop-color: yellowgreen;
+    }
+    75% {
+        stop-color: orangered;
+    }
+    90% {
+        stop-color: purple;
+    }
+}

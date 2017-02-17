@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Demo</title>
+    <link rel="stylesheet" href="../common/main.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <iframe src="" class="iframe-container js-iframe" style="width: 600px"></iframe>
+
+    <div class="controls js-navigation">
+        <button class="controls-button" data-nav="prev">
+            <img src="../common/arrow-left.svg" width="40px"/>
+        </button>
+
+        <button class="controls-button" data-nav="next">
+            <img src="../common/arrow-right.svg" width="40px"/>
+        </button>
+    </div>
+</div>
+
+<script src="../common/navigation.js"></script>
+<script>
+    (function () {
+        let currentIndexExample = 0;
+        let examples = [
+            'linear.svg',
+            'linear-angle.svg',
+            'linear-animation.svg',
+            'radial.svg',
+        ];
+        window.navigation(examples, currentIndexExample);
+
+    }());
+</script>
+</body>
+</html>

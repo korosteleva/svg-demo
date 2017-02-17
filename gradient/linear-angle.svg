@@ -1,0 +1,18 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 100 100" xml:space="preserve">
+
+    <!-- Градиент -->
+  <linearGradient id="linear-angle" x1="0" y1="0" x2="60%" y2="50%">
+    <stop offset="0%" stop-color="gold"/>
+    <stop offset="100%" stop-color="yellowgreen"/>
+  </linearGradient>
+
+    <!-- Градиент -->
+  <linearGradient id="linear-gradient">
+    <stop offset="0%" stop-color="gold"/>
+    <stop offset="100%" stop-color="yellowgreen"/>
+  </linearGradient>
+
+    <rect fill="url(#linear-angle)" width="40%" height="40%" y="25%"/>
+    <rect fill="url(#linear-gradient)" x="60%" y="25%" width="40%" height="40%"/>
+</svg>

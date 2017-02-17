@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 495.2 495.2;" xml:space="preserve">
+    <style>
+        @import url(svg-hello.css);
+	</style>
+
+    <!-- Градиент -->
+  <linearGradient id="linear-gradient">
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="100%" stop-color="gold"/>
+  </linearGradient>
+
+    <text class="text" x="0" y="50" fill="url(#linear-gradient)">Linear</text>
+</svg>

@@ -25,3 +25,10 @@
 .controls:hover {
     background: rgba(238, 238, 238, 1);
 }
+
+.controls-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+}
