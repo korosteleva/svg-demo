@@ -1,0 +1,27 @@
+.wrapper {
+    margin: 0 auto;
+    width: 100vw;
+    text-align: center;
+}
+
+.iframe-container {
+    --iframe-width-diff: 250px;
+    width: calc(var(--iframe-width-diff) + 100px);
+    height: calc(100vh - 20px);
+    border: none;
+}
+
+.controls {
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    background: rgba(238, 238, 238, 0.7);
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid #dddddd;
+    transition: background .3s;
+}
+
+.controls:hover {
+    background: rgba(238, 238, 238, 1);
+}

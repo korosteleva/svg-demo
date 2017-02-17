@@ -1,0 +1,54 @@
+.chimney {
+    fill: #680B09;
+}
+.chimney-top {
+    fill: #C43D27;
+}
+.window-top-right,
+.window-bottom-left {
+    fill: #0E75AF;
+}
+.window-top-left,
+.window-bottom-right {
+    fill: #1EA4C4;
+}
+.grass {
+    fill: #207700;
+}
+.door-handler-top {
+    fill: #DB5435;
+}
+.door-handler-bottom {
+    fill: #C43D27;
+}
+.house-wrapper {
+    fill: #FFFFFF;
+}
+.house-wrapper-top {
+    fill: #E8F9FC;
+}
+.roof-right {
+    fill: #AA1E0F;
+}
+.roof-left {
+    fill: #C43D27;
+}
+.door-top {
+    fill: #FCA12A;
+}
+.door-bottom {
+    fill: #E58613;
+}
+
+@media (max-width: 480px) {
+    .house-wrapper {
+        stroke: #d2691e;
+        stroke-width: 1;
+    }
+    .roof-left {
+        fill: #AA1E0F;
+    }
+    .door-bottom {
+        fill: #FCA12A;
+    }
+}
