@@ -13,6 +13,10 @@
     <stop offset="100%" stop-color="yellowgreen"/>
   </linearGradient>
 
-    <rect fill="url(#linear-angle)" width="40%" height="40%" y="25%"/>
+    <rect fill="url(#linear-angle)" width="40%" height="40%" x="5%" y="25%"/>
+    <line x1="50%" y1="20%" x2="0%" y2="70%" stroke="black" stroke-width="1" />
+
+
     <rect fill="url(#linear-gradient)" x="60%" y="25%" width="40%" height="40%"/>
+    <line x1="80%" y1="20%" x2="80%" y2="70%" stroke="black" stroke-width="1" />
 </svg>
