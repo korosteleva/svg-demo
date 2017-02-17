@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG test</title>
+
+    <style type="text/css">
+        .wrapper {
+            margin: 0 auto;
+            width: 100vw;
+            text-align: center;
+        }
+
+        .iframe-container {
+            --iframe-width-diff: 250px;
+            width: calc(var(--iframe-width-diff) + 100px);
+            height: calc(100vh - 20px);
+            border: 1px solid #bbbbbb;
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(238, 238, 238, 0.7);
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <iframe src="home.svg" class="iframe-container js-iframe"></iframe>
+
+    <div class="controls">
+        <input type="range" class="js-iframe-width-range" value="700" step="50" max="700" min="0" />
+    </div>
+</div>
+
+<script>
+    (function () {
+        let rangeNode = document.querySelector('.js-iframe-width-range');
+        let frameNode = document.querySelector('.js-iframe');
+        let initRangeValue = parseInt(rangeNode.getAttribute('max'), 10);
+        rangeNode.setAttribute('value', initRangeValue);
+        setIframeWidth(initRangeValue);
+
+        rangeNode.addEventListener('input', function (event) {
+            let rangeValue = event.target.value;
+            setIframeWidth(rangeValue);
+        });
+
+        function setIframeWidth(rangeValue) {
+            frameNode.style.setProperty('--iframe-width-diff', rangeValue + 'px');
+        }
+    }());
+</script>
+</body>
+</html>
