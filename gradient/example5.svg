@@ -1,0 +1,23 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
+    <style>
+        @import url(example5.css);
+    </style>
+    <linearGradient id="grad--linear-1">
+        <stop offset="0%" stop-color="crimson"
+              class="stop-1"/>
+        <stop offset="50%" stop-color="gold"
+              class="stop-2"/>
+        <stop offset="100%" stop-color="teal"
+              class="stop-3"/>
+    </linearGradient>
+
+    <pattern id="patt" width="100" height="100" viewBox="0 0 200 200" patternUnits="userSpaceOnUse">
+        <circle fill="url(#grad--linear-1)" r="55" cx="100" cy="100" class="circle-1"/>
+        <circle fill="url(#grad--linear-1)" r="55" cx="0" cy="0"/>
+        <circle fill="url(#grad--linear-1)" r="55" cx="0" cy="200"/>
+        <circle fill="url(#grad--linear-1)" r="55" cx="200" cy="0"/>
+        <circle fill="url(#grad--linear-1)" r="55" cx="200" cy="200"/>
+    </pattern>
+
+    <rect fill="url(#patt)" width="100%" height="100%"/>
+</svg>

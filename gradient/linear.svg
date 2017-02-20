@@ -1,10 +1,16 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	 viewBox="0 0 100 100" style="enable-background:new 0 0 495.2 495.2;" xml:space="preserve">
+	 viewBox="0 0 100 100" xml:space="preserve">
+    <style>
+        @import url(text.css);
+	</style>
+
     <!-- Градиент -->
   <linearGradient id="linear-gradient">
     <stop offset="0%" stop-color="red"/>
     <stop offset="100%" stop-color="gold"/>
   </linearGradient>
 
-  <rect fill="url(#linear-gradient)" width="100%" height="100%"/>
+  <text text-anchor="middle" x="49" class="text">Gradients</text>
+
+  <path xmlns="http://www.w3.org/2000/svg" d="M90,30.2c0-11-9-20.1-20-20.1s-20,9.1-20,20.2c0,0.2,0-0.3,0,0.7H50c0-1,0-0.6,0-0.8c0-11-9-20.1-20-20.1s-20,9.1-20,20.2 c0,0.2,0-0.3,0,0.7h0c0.3,20,30,39.5,40,55c10-15.5,39.7-35,40-55h0C90,30,90,30.4,90,30.2z" fill="url(#linear-gradient)"/>
 </svg>

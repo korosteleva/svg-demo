@@ -1,0 +1,55 @@
+stop {
+    -webkit-animation: colors 5s infinite;
+    animation: colors 5s infinite;
+}
+
+.stop-2 {
+    -webkit-animation-delay: 1.25s;
+    animation-delay: 1.25s;
+}
+
+.stop-3 {
+    -webkit-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+
+
+@keyframes colors {
+    15% {
+        stop-color: crimson;
+    }
+    30% {
+        stop-color: gold;
+    }
+    45% {
+        stop-color: teal;
+    }
+    60% {
+        stop-color: yellowgreen;
+    }
+    75% {
+        stop-color: orangered;
+    }
+    90% {
+        stop-color: purple;
+    }
+}
+circle {
+    stroke-width: 55px;
+    stroke-dasharray: 5px 10px;
+    stroke: url(#grad--linear-1);
+    fill: none;
+    -webkit-animation: stroke-width 2s infinite;
+    animation: stroke-width 2s infinite;
+}
+
+.circle-1 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+@keyframes stroke-width {
+    50% {
+        stroke-width: 10px;
+    }
+}
