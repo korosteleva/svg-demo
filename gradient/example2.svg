@@ -1,12 +1,132 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
-<defs>
-    <radialGradient id="radial-gradient"
-                    fx="5%" fy="5%" r="65%"
-                    spreadMethod="reflect">
-        <stop offset="0%" stop-color="turquoise"/>
-        <stop offset="100%" stop-color="black"/>
-    </radialGradient>
-</defs>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve" class="enter-stage-south">
+    <style>
+        .enter-stage-right {
+            -moz-animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            -moz-animation-name: slidein;
+            -webkit-animation-name: slidein;
+        }
 
-<circle fill="url(#radial-gradient)" cx="50" cy="50" r="50"/>
+        @-moz-keyframes slidein {
+            from {
+                margin-left: 100%;
+            }
+            to {
+                margin-left: 10%;
+            }
+        }
+
+        @-webkit-keyframes slidein {
+            from {
+                margin-left: 100%;
+            }
+            to {
+                margin-left: 10%;
+            }
+        }
+
+    </style>
+    <defs>
+        <pattern id="gridPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M10 0 L0 0 L0 10" fill='none' stroke='magenta' stroke-width='0.25'>
+            </path>
+        </pattern>
+    </defs>
+    <g id="layer1">
+        <rect id="grid" width="100%" height="100%" x="0" y="0" stroke='magenta' stroke-width='0.25' fill='url(#gridPattern)'>
+        </rect>
+    </g>
+    <linearGradient id="horizontal" gradientTransform="rotate(90,.5,.5)">
+        <stop offset=".10" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values=".10;.05;.09" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".20" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values=".20;.15;.19" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".30" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values=".30;.25;;.29" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".40" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values=".40;.35;.39" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".50" stop-color="cyan" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".50;.45;.49" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".60" stop-color="cyan" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".60;.55;.59" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".70" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values=".70;.65;.69" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".80" stop-color="cyan" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".80;.75;.79" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".90" stop-color="cyan" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".90;.85;.89" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset="1" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values="1;.95;.99" repeatCount="indefinite">
+            </animate>
+        </stop>
+    </linearGradient>
+    <linearGradient id="vertical">
+        <stop offset=".10" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values=".10;.05;.09" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".20" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values=".20;.15;.19" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".30" stop-color="magenta">
+            <animate attributeName="offset" dur="20s" values=".30;.25;.29" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".40" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values=".40;.35;.39" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".50" stop-color="magenta" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".50;.45;.49" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".60" stop-color="magenta" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".60;.55;.59" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".70" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values=".70;.65;.69" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".80" stop-color="magenta" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".80;.75;.79" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset=".90" stop-color="magenta" stop-opacity="0">
+            <animate attributeName="offset" dur="20s" values=".90;.85;.89" repeatCount="indefinite">
+            </animate>
+        </stop>
+        <stop offset="1" stop-color="cyan">
+            <animate attributeName="offset" dur="20s" values="1;.95;.99" repeatCount="indefinite">
+            </animate>
+        </stop>
+    </linearGradient>
+
+    <rect x="0" y="0" height="100%" width="100%" fill-opacity=".5" fill="url(#horizontal)">
+        <animate attributeName="width" dur="20s" values="10%;20%;30%;40%;50%;60%;70%;80%;90%;100%;90%;80%;70%;60%;50%;40%;30%;20%;10%" repeatCount="indefinite">
+        </animate>
+    </rect>
+    <rect x="0" y="0" height="100%" width="100%" fill-opacity=".5" fill="url(#vertical)">
+        <animate attributeName="height" dur="20s" values="10%;20%;30%;40%;50%;60%;70%;80%;90%;100%;90%;80%;70%;60%;50%;40%;30%;20%;10%" repeatCount="indefinite">
+        </animate>
+    </rect>
 </svg>
