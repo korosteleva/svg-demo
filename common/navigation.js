@@ -1,11 +1,28 @@
 (function () {
+
     window.navigation = function(examples, currentIndexExample) {
         let examplesCount = examples.length;
 
         let frameNode = document.querySelector('.js-iframe');
+        let descriptionNode = document.querySelector('.js-description');
         let navigationNode = document.querySelector('.js-navigation');
 
-        frameNode.setAttribute('src', examples[currentIndexExample]);
+        function renderInfo(data) {
+            switch (typeof data) {
+                case 'string':
+                    frameNode.setAttribute('src', data);
+                    break;
+
+                case 'object':
+                    frameNode.setAttribute('src', data.src);
+                    if (descriptionNode) {
+                        descriptionNode.innerHTML = data.description || '';
+                    }
+                    break;
+            }
+        }
+
+        renderInfo(examples[currentIndexExample]);
 
         navigationNode.addEventListener('click', function (event) {
             let navDirection;
@@ -41,7 +58,7 @@
 
             }
 
-            frameNode.setAttribute('src', examples[currentIndexExample]);
+            renderInfo(examples[currentIndexExample]);
         });
     }
 }());

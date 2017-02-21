@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Demo - Primitives</title>
+    <link rel="stylesheet" href="../common/main.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <div class="demo-info-wrapper">
+        <div class="demo-info-iframe">
+            <iframe src="" class="iframe-container js-iframe"></iframe>
+        </div>
+        <div class="demo-info-description js-description"></div>
+    </div>
+
+
+    <div class="controls js-navigation">
+        <button class="controls-button" data-nav="prev">
+            <img src="../common/arrow-left.svg" width="40px"/>
+        </button>
+
+        <button class="controls-button" data-nav="next">
+            <img src="../common/arrow-right.svg" width="40px"/>
+        </button>
+    </div>
+</div>
+
+<script src="../common/navigation.js"></script>
+<script>
+    (function () {
+        let currentIndexExample = 0;
+        let examples = [{
+            src: 'line.svg',
+            description: `
+                <h2>Line</h2>
+                <code>x1, y1</code> - координаты первой точки<br/>
+                <code>x2, y2</code> - координаты второй точки
+            `
+        }, {
+            src: 'polyline.svg',
+            description: `
+                <h2>Polyline</h2>
+                <code>path="x1,y1 x2,y2 x3,y3"</code><br>
+                координаты точек через пробел
+            `
+        }, {
+            src: 'rect.svg',
+            description: `
+                <h2>Rect</h2>
+                <code>x, y</code> - координаты верхнего левого угла<br/>
+                <code>width</code> - ширина<br/>
+                <code>height</code> - высота<br/>
+                <code>rx, ry</code> - радиус закруглений
+            `
+        }, {
+            src: 'circle.svg',
+            description: `
+                <h2>Circle</h2>
+                <code>cx, cy</code> - координаты центра<br/>
+                <code>r</code> - радиус
+            `
+        }, {
+            src: 'ellipse.svg',
+            description: `
+                <h2>Ellipse</h2>
+                <code>cx, cy</code> - координаты центра<br/>
+                <code>rx, ry</code> - радиусы
+            `
+        }, {
+            src: 'polygon.svg',
+            description: `
+                <h2>Polygon</h2>
+                <code>points</code> - набор координат.<br>
+                Отчет с левого верхнего угла
+            `
+        }];
+        window.navigation(examples, currentIndexExample);
+    }());
+</script>
+</body>
+</html>
