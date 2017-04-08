@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    animation: heartPulse 1.3s infinite;
+    fill: crimson;
+}
+@keyframes heartPulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.title {
+    font-family: Helvetica;
+    font-size: 150px;
+    transform: translateY(-20%);
+}
+
+.title-label,
+.heart {
+    display: inline-block;
+    vertical-align: middle;
+}
