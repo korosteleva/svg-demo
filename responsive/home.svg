@@ -2,7 +2,7 @@
 	 viewBox="0 0 495.2 495.2" style="enable-background:new 0 0 495.2 495.2;" xml:space="preserve">
 	<style>
 		@import url(../common/views.css);
-		@import url(svg-home.css);
+		@import url(responsive.css);
 	</style>
 	<!-- chimney -->
 	<g class="hidden-md">

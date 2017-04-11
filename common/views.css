@@ -1,35 +1,41 @@
+.hidden-sm,
+.hidden-md,
+.hidden-lg {
+    transition: all 1s;
+}
+
 @media(max-width: 960px) {
     .hidden-sm {
-        display: block;
+        opacity: 1;
     }
     .hidden-md {
-        display: block;
+        opacity: 1;
     }
     .hidden-lg {
-        display: none;
+        opacity: 0;
     }
 }
 
 @media(max-width: 680px) {
     .hidden-sm {
-        display: block;
+        opacity: 1;
     }
     .hidden-md {
-        display: none;
+        opacity: 0;
     }
     .hidden-lg {
-        display: none;
+        opacity: 0;
     }
 }
 
 @media(max-width: 380px) {
     .hidden-sm {
-        display: none;
+        opacity: 0;
     }
     .hidden-md {
-        display: none;
+        opacity: 0;
     }
     .hidden-lg {
-        display: none;
+        opacity: 0;
     }
 }
