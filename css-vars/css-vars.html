@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Demo - Css Vars</title>
+    <style>
+        svg, body {
+            background: #D1A894;
+        }
+        #white-path {
+            fill: white;
+        }
+        .iris {
+            fill: black;
+            stroke: #3F95BF;
+            stroke-width: 12px;
+
+            cx: calc(25px + 55px * var(--mouse-x));
+        }
+    </style>
+</head>
+<body>
+<svg viewBox="0 0 250 100">
+    <clipPath id="white-clip">
+        <path id="white-path" d="M1,50 a65,80 0 0,1 100,0 a80,80 0 0,1 -100,0 Z"></path>
+    </clipPath>
+    <use id="eye-white" href="#white-path"></use>
+    <use href="#eye-white" x="148"></use>
+    <circle id="iris" class="iris" cy="45" r="18" clip-path="url(#white-clip)"></circle>
+    <use class="iris" href="#iris" x="148"></use>
+</svg>
+
+<script>
+    var root = document.documentElement;
+
+    document.addEventListener("mousemove", evt => {
+        let x = evt.clientX / innerWidth;
+        let y = evt.clientY / innerHeight;
+
+        root.style.setProperty("--mouse-x", x);
+        root.style.setProperty("--mouse-y", y);
+    });
+
+</script>
+</body>
+</html>
