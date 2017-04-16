@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Demo - Primitives</title>
+    <link rel="stylesheet" href="../common/main.css"/>
+    <style>
+        .demo-info-wrapper {
+            justify-content: center;
+            height: 33%;
+            box-sizing: border-box;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+<svg style="display: none">
+    <defs>
+        <symbol id="s-dasharray">
+            <path d="M 0,50
+               Q100,0 200,50
+               300,100 400,50
+               500,0 600,50
+               700,100 800,50"/>
+        </symbol>
+    </defs>
+</svg>
+
+<div class="wrapper" style="height: 100vh;">
+    <div class="demo-info-wrapper">
+        <svg width="840" height="100">
+            <use xlink:href="#s-dasharray" fill="transparent"
+                 stroke="#46b8da" stroke-width="4%" stroke-dasharray="10%"/>
+        </svg>
+    </div>
+    <div class="demo-info-wrapper">
+        <svg width="840" height="100">
+            <use xlink:href="#s-dasharray" fill="transparent"
+                 stroke="yellowgreen" stroke-width="70" stroke-dasharray="10 18"/>
+        </svg>
+    </div>
+    <div class="demo-info-wrapper">
+        <svg width="840" height="100">
+            <use xlink:href="#s-dasharray" fill="transparent"
+                 stroke="#c7254e" stroke-width="30" stroke-dasharray="80 20 5 20"/>
+        </svg>
+    </div>
+</div>
+</body>
+</html>
