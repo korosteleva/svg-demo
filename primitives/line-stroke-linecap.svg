@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 400" xml:space="preserve">
+    <line stroke-linecap="butt"
+          x1="60" y1="30" x2="60" y2="300"
+          stroke="#c7254e" stroke-width="40"/>
+
+    <line stroke-linecap="round"
+          x1="130" y1="30" x2="130" y2="300"
+          stroke="#c7254e" stroke-width="40"/>
+
+    <line stroke-linecap="square"
+          x1="200" y1="30" x2="200" y2="300"
+          stroke="#c7254e" stroke-width="40"/>
+
+    <path d="M60,30 L60,300 M130,30 L130,300 M200,30 L200,300"
+          stroke="black" stroke-width="5" />
+</svg>
