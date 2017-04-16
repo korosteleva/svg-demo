@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG Demo - Primitives</title>
+    <link rel="stylesheet" href="../common/main.css"/>
+</head>
+<body>
+<svg style="display: none">
+    <defs>
+        <symbol id="s-corner">
+            <path d="M 0 50 h 80 v 80" stroke-width="60" fill="none" transform="rotate(-45 70 50)"/>
+        </symbol>
+        <symbol id="s-corner-guide">
+            <g transform="rotate(-45 70 50)">
+                <circle r="9" cx="0" cy="50"/>
+                <circle r="9" cx="80" cy="130"/>
+                <path d="M 0 50 h 80 v 80" stroke-width="5" fill="none" />
+            </g>
+        </symbol>
+    </defs>
+</svg>
+
+<div class="wrapper">
+    <div class="demo-info-wrapper" style="height: auto;padding-top: 30px;">
+        <div class="demo-info-iframe">
+            <svg viewBox="0 0 180 180" width="300" height="30vh">
+                <use href="#s-corner" stroke="orangered" stroke-linejoin="miter"/>
+                <use href="#s-corner-guide" y="0" stroke="orange" fill="orange"/>
+            </svg>
+        </div>
+        <div class="demo-info-description" style="height: auto">
+            <code>stroke-linejoin="miter"</code>
+        </div>
+    </div>
+    <div class="demo-info-wrapper">
+        <div class="demo-info-iframe">
+            <svg viewBox="0 0 180 180" width="300" height="30vh">
+                <use href="#s-corner" stroke="steelblue" stroke-linejoin="round"/>
+                <use href="#s-corner-guide" y="0" stroke="skyblue" fill="skyblue"/>
+            </svg>
+        </div>
+        <div class="demo-info-description" style="height: auto">
+            <code>stroke-linejoin="round"</code>
+        </div>
+    </div>
+    <div class="demo-info-wrapper">
+        <div class="demo-info-iframe">
+            <svg viewBox="0 0 180 180" width="300" height="30vh">
+                <use href="#s-corner" stroke="olivedrab" stroke-linejoin="bevel"/>
+                <use href="#s-corner-guide" y="0" stroke="yellowgreen" fill="yellowgreen"/>
+            </svg>
+        </div>
+        <div class="demo-info-description" style="height: auto">
+            <code>stroke-linejoin="bevel"</code>
+        </div>
+    </div>
+</div>
+</body>
+</html>
