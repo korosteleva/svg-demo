@@ -45,23 +45,23 @@
     color: yellowgreen;
 }
 .menu-item_apple:hover {
-    color: green;
+    color: #9a6210;
 }
 .menu-item_cherry {
     color: crimson;
 }
 .menu-item_cherry:hover {
-    color: #960d27;
+    color: #ad9410;
 }
 .menu-item_pinapple {
     color: #ff9800;
 }
 .menu-item_pinapple:hover {
-    color: #9a6210;
+    color: #960d27;
 }
 .menu-item_pear {
     color: gold;
 }
 .menu-item_pear:hover {
-    color: #ad9410;
+    color: green;
 }
